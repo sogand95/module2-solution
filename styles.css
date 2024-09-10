@@ -1,0 +1,93 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  text-align: center;
+  margin: 20px 0;
+}
+
+h1 {
+  font-size: 2em; /* 75% larger */
+}
+
+/* Menu Container */
+.menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 20px;
+}
+
+.menu-item {
+  border: 1px solid black;
+  padding: 20px;
+  margin: 10px;
+  position: relative;
+  background-color: #f0f0f0;
+  flex: 1;
+  min-width: 280px;
+}
+
+.menu-item p {
+  margin-top: 40px;
+}
+
+/* Section Title Styles */
+.title {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: lightgray;
+  padding: 5px 10px;
+  border: 1px solid black;
+  font-size: 1.25em; /* 25% larger */
+}
+
+/* Section Specific Styles */
+.chicken {
+  background-color: #ffd1d1; /* light pink */
+}
+
+.beef {
+  background-color: #ff8080; /* light red */
+}
+
+.sushi {
+  background-color: #ffeb99; /* light yellow */
+}
+
+/* Responsive Styles */
+
+/* Tablet view */
+@media (min-width: 768px) and (max-width: 991px) {
+  .menu-container {
+    flex-direction: column;
+  }
+
+  .menu-item {
+    width: calc(50% - 40px); /* Two columns on the first row */
+  }
+
+  .menu-item:nth-child(3) {
+    width: calc(100% - 40px); /* Full width for the third item */
+  }
+}
+
+/* Mobile view */
+@media (max-width: 767px) {
+  .menu-container {
+    flex-direction: column;
+  }
+
+  .menu-item {
+    width: calc(100% - 40px);
+  }
+}
